@@ -43,7 +43,7 @@ dependencies {
     implementation(libs.androidx.compose.material3)
 
     // FFmpeg para streaming (usando ffmpeg-kit que es el sucesor de mobile-ffmpeg)
-    implementation("com.arthenica:ffmpeg-kit-full:6.0-2")
+    implementation("com.mrljdx:ffmpeg-kit-full:6.1.4")
 
     // Ktor para Control Remoto
     implementation("io.ktor:ktor-server-cio:2.3.0")
