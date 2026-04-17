@@ -13,3 +13,7 @@
 .externalNativeBuild
 .cxx
 local.properties
+.venv/
+java_jdk/
+libs_temp/
+build_log*.txt

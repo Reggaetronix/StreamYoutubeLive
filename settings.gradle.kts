@@ -16,10 +16,8 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        jcenter()
     }
 }
 
 rootProject.name = "Strem Youtube - LIVE"
 include(":app")
- 
