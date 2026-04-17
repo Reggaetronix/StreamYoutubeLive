@@ -1,6 +1,6 @@
 package com.example.stremyoutube_live.media
 
-import com.arthenica.mobileffmpeg.FFmpeg
+import com.arthenica.ffmpegkit.FFmpegKit
 import android.util.Log
 
 class FFmpegEncoder {
@@ -24,12 +24,13 @@ class FFmpegEncoder {
         """.trimIndent().replace("\n", " ")
 
         Log.d("StreamTube", "Ejecutando comando FFmpeg...")
-        currentExecutionId = FFmpeg.executeAsync(command) { executionId, returnCode ->
+        FFmpegKit.executeAsync(command) { session ->
+            val returnCode = session.returnCode
             Log.d("StreamTube", "Sesión terminada. Status: ${returnCode}")
         }
     }
 
     fun stop() {
-        FFmpeg.cancel()
+        FFmpegKit.cancel()
     }
 }
